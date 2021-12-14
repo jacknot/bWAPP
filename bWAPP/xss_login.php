@@ -155,7 +155,7 @@ function sqli($data)
 
             $row = mysqli_fetch_array($recordset);
 
-            if($row["login"])
+            if(!is_null($row) && $row["login"])
             {
 
                 // $message = "<font color=\"green\">Welcome " . ucwords($row["login"]) . "...</font>";
